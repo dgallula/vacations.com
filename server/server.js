@@ -7,6 +7,11 @@ import http from "http";
 import { Server } from "socket.io";
 
 const app = express();
+app.use(session({
+	secret: 'secret',
+	resave: true,
+	saveUninitialized: true
+}));
 app.use(express.json());
 app.use(cors());
 

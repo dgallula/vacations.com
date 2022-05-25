@@ -9,7 +9,7 @@ import TextField from '@mui/material/TextField';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
-
+import {serverApi} from "../utils/routes";
 
 
 export default function Login() {
@@ -21,7 +21,7 @@ export default function Login() {
     // const [role, setRole] = useState(false)
 
     const handleClcik = async () => {
-        const res = await fetch('http://localhost:1000/users/login', {
+        const res = await fetch(serverApi.login, {
             method: "post",
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ username, password }),
