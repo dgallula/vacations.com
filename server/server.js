@@ -5,6 +5,7 @@ import usersRouter from "./controllers/users-controller.js";
 import vacationsRouter from "./controllers/vacations-controller.js";
 import http from "http";
 import { Server } from "socket.io";
+import session from 'express-session';
 
 const app = express();
 app.use(session({

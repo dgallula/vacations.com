@@ -14,6 +14,7 @@ export default function Main() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/charAdmin" element={<CharAdmin />} />
+                <Route path="/vacations" element={<Vacations />} />
             </Routes>
         </div>
     )

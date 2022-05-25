@@ -107,7 +107,8 @@ export default function Vacations() {
 
     return (
         <div>
-            {
+            <h1>Vacations</h1>
+            {/* {
                 !localStorage.username ?
                     <>
                         <Login />
@@ -155,7 +156,7 @@ export default function Vacations() {
                         }
 
                     </>
-            }
+            } */}
         </div>
     )
 }
