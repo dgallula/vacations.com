@@ -20,7 +20,7 @@ const addVacation = (newVacationBody) => {
   return vacationsDal.anddNewVacation(newVacationBody);
 };
 
-const updateVacation = (id, vacation) => {
+const updateVacation = (vacation) => {
   return vacationsDal.update(id, vacation);
 };
 

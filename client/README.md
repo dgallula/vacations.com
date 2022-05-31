@@ -1,7 +1,7 @@
 
 
 users 
-logout(delete) 'http://localhost:1000/users/logout'
+logout(delete) 'http://localhost:5000/users/logout'
 login (post) http://localhost:5000/users/login
 register (post) http://localhost:5000/users/register
 

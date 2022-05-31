@@ -9,6 +9,7 @@ import Box from '@mui/material/Box';
 import Popover from '@mui/material/Popover';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { serverApi } from '../utils/routes';
 
 
 /////////////=========== Page for Admin edit and delete vacations==============///////////////
@@ -26,7 +27,7 @@ export default function AdminCard({ vacation, setUpdate1 }) {
     const [msg, setmsg] = useState("");
 
     const delvacations = async () => {
-        const res = await fetch(`http://localhost:5000/api/admin/${vacation.id}`, {
+        const res = await fetch(serverApi.delvacation, {
             method: "DELETE",
             headers: { 'content-type': 'application/json; charset=UTF-8' },
             credentials: "include"
@@ -36,7 +37,7 @@ export default function AdminCard({ vacation, setUpdate1 }) {
 
 
     const editvacation = async () => {
-        const res1 = await fetch('http://localhost:1000/admin', {
+        const res1 = await fetch(serverApi.edivacation, {
             method: "put",
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ id: vacation.id, descriptions, country, cityName, price, img, dateFrom, dateUntil }),

@@ -82,11 +82,11 @@ vacationsRouter.post(
 );
 
 vacationsRouter.put(
-  `${generalSetting.baseUrl}/vacations/:id`,
+  `${generalSetting.baseUrl}/vacations`,
   async (req, res) => {
-    const id = req.params.id;
+    // id = req.params.id;
     const body = req.body;
-    const updateResult = await vacationsBl.updateVacation(id, body);
+    const updateResult = await vacationsBl.updateVacation(body);
     if (!checkResultStatus(updateResult)) {
       return res.status(500).send(updateResult);
     } else {

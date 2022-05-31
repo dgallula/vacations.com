@@ -80,7 +80,7 @@ const getNumOfVacationsFollowers = async () => {
 const anddNewVacation = async (newVacation) => {
   try {
     let postResult = await connection.promise()
-      .query(`INSERT INTO vacations (city,country, descriptions, image, price, dateFrom, dateUntil,)
+      .query(`INSERT INTO vacations (cityName,country, descriptions, img, price, dateFrom, dateUntil, followers, userId)
         VALUES
          ("${newVacation.city}","${newVacation.country}", "${newVacation.descriptions}","${newVacation.image}","${newVacation.price}", "${newVacation.dateFrom}", "${newVacation.dateUntill}")`);
     vacationsResult.success = true;
